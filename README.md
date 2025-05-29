@@ -22,3 +22,6 @@ pynguin \
     -v
 ```
 
+## Continuous Integration with GitHub Action
+Use the configuration provided in `ci.yml` as a starter for your GitHub Action.
+Further reading on setting up git and the rest: https://www.notion.so/gurkhaman/Github-Quickstart-202549021b4880b1a960e662916332df
