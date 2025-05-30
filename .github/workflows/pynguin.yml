@@ -28,6 +28,7 @@ jobs:
         run: |
           export PYNGUIN_DANGER_AWARE=x
           pynguin --project-path ./ --output-path ./pynguin-results --module-name car -v
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
           pytest pynguin-results/test_car.py
 
       - name: Run tests with pytest
