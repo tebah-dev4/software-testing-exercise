@@ -24,11 +24,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Pynguin to generate tests for car.py
+      - name: Generate Pynguin tests and run them
         run: |
           export PYNGUIN_DANGER_AWARE=x
           pynguin --project-path ./ --output-path ./pynguin-results --module-name car -v
-          cp car.py pynguin=results
           pytest pynguin-results/test_car.py
 
       - name: Run tests with pytest
